@@ -24,12 +24,8 @@ namespace WindowsFormsApp1
         int selectedRow;
         private void Form1_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "иКС_ПЛАТDataSet.Рабочие". При необходимости она может быть перемещена или удалена.
-            this.рабочиеTableAdapter.Fill(this.иКС_ПЛАТDataSet.Рабочие);
             // TODO: данная строка кода позволяет загрузить данные в таблицу "иКС_ПЛАТDataSet.Программный_продукт". При необходимости она может быть перемещена или удалена.
             this.программный_продуктTableAdapter.Fill(this.иКС_ПЛАТDataSet.Программный_продукт);
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "иКС_ПЛАТDataSet.Заказ". При необходимости она может быть перемещена или удалена.
-            this.заказTableAdapter.Fill(this.иКС_ПЛАТDataSet.Заказ);
 
         }
 
@@ -62,15 +58,32 @@ namespace WindowsFormsApp1
 
         // Кнопка «Редактировать»
 
-        private void label1_Click(object sender, EventArgs e)
+        private void button2_Click(object sender, EventArgs e)
         {
+            selectedRow = dataGridView1.CurrentCell.RowIndex;
+            dataGridView1.Rows.RemoveAt(selectedRow);
+        }
 
+        private void button4_Click(object sender, EventArgs e)// Переход на новую форму
+        {
+            
+            Form2 fm2 = new Form2();
+            fm2.Show();
+            fm2.Owner = this;
+            
+            
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
         {
 
         }
+
+        private void textBox5_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
         private void textBox2_TextChanged(object sender, EventArgs e)
         {
 
@@ -86,30 +99,36 @@ namespace WindowsFormsApp1
 
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
         }
 
-        private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        private void textBox5_TextChanged_1(object sender, EventArgs e)
         {
 
         }
 
-        private void button2_Click(object sender, EventArgs e)
-        {
-            selectedRow = dataGridView1.CurrentCell.RowIndex;
-            dataGridView1.Rows.RemoveAt(selectedRow);
+        private void button5_Click(object sender, EventArgs e)
+        {/*
+            for (int i = 0; i < DataGridView.RowCount; i++)
+            {
+                DataGridView.Rows[i].Selected = false;
+                for (int j = 0; j < DataGridView.ColumnCount; j++)
+                    if (DataGridView.Rows[i].Cells[j].Value != null)
+                        if
+                        (DataGridView.Rows[i].Cells[j].Value.ToString().Contains(textBox6.Text))
+                        {
+                            DataGridView.Rows[i].Selected = true;
+                            break;
+                        }
+            }*/
+
         }
 
-        private void button4_Click(object sender, EventArgs e)
+        private void textBox6_TextChanged(object sender, EventArgs e)
         {
-            
-            Form2 fm2 = new Form2();
-            fm2.Show();
-            fm2.Owner = this;
-            Hide();
-            
+
         }
     }
 }

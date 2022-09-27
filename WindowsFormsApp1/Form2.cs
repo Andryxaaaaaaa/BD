@@ -16,20 +16,36 @@ namespace WindowsFormsApp1
         {
             InitializeComponent();
         }
-
-        DataTable table = new DataTable();
-        int selectedRow;
-
+        
         private void Form2_Load(object sender, EventArgs e)
         {
-            // TODO: данная строка кода позволяет загрузить данные в таблицу "иКС_ПЛАТDataSet.Заказ". При необходимости она может быть перемещена или удалена.
-            this.заказTableAdapter.Fill(this.иКС_ПЛАТDataSet.Заказ);
+            // TODO: данная строка кода позволяет загрузить данные в таблицу "иКС_ПЛАТDataSet.Программный_продукт". При необходимости она может быть перемещена или удалена.
+            this.программный_продуктTableAdapter.Fill(this.иКС_ПЛАТDataSet.Программный_продукт);
 
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-
+            Form1 main = this.Owner as Form1;
+            if (main != null)
+            {
+                DataRow nRow = main.иКС_ПЛАТDataSet.Tables[2].NewRow();
+                nRow[0] = textBox1.Text;
+                nRow[1] = textBox2.Text;
+                nRow[2] = textBox3.Text;
+                nRow[3] = textBox4.Text;
+                nRow[4] = textBox5.Text;
+                main.иКС_ПЛАТDataSet.Tables[2].Rows.Add(nRow);
+                main.программный_продуктTableAdapter.Update(main.иКС_ПЛАТDataSet.Программный_продукт);
+                main.иКС_ПЛАТDataSet.Tables[2].AcceptChanges();
+                main.dataGridView1.Refresh();
+                textBox1.Text = "";
+                textBox2.Text = "";
+                textBox3.Text = "";
+                textBox4.Text = "";
+                textBox5.Text = "";
+            }
+           
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)
@@ -37,50 +53,14 @@ namespace WindowsFormsApp1
 
         }
 
-        private void textBox2_TextChanged(object sender, EventArgs e)
+        private void label2_Click(object sender, EventArgs e)
         {
 
-        }
-        private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
-        {
-            selectedRow = e.RowIndex;
-            DataGridViewRow row = dataGridView1.Rows[selectedRow];
-            textBox1.Text = row.Cells[0].Value.ToString();
-            textBox2.Text = row.Cells[1].Value.ToString();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            иКС_ПЛАТDataSet.Заказ.Rows.Add(textBox1.Text, textBox2.Text);
-            dataGridView1.DataSource = иКС_ПЛАТDataSet.Заказ;
         }
 
         private void button3_Click(object sender, EventArgs e)
         {
-            DataGridViewRow newDataRow = dataGridView1.Rows[selectedRow];
-            newDataRow.Cells[0].Value = textBox1.Text;
-            newDataRow.Cells[1].Value = textBox2.Text;
-
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            selectedRow = dataGridView1.CurrentCell.RowIndex;
-            dataGridView1.Rows.RemoveAt(selectedRow);
-        }
-
-        private void button4_Click(object sender, EventArgs e)
-        {
-            Form3 fm3 = new Form3();
-            fm3.Show();
-            Close();
-        }
-
-        private void button5_Click(object sender, EventArgs e)
-        {
-            Form1 fm1 = new Form1();
-            fm1.Show();
-            Close();
+               
         }
     }
 }
