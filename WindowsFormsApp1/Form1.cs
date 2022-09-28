@@ -39,7 +39,9 @@ namespace WindowsFormsApp1
             newDataRow.Cells[2].Value = textBox3.Text;
             newDataRow.Cells[3].Value = textBox4.Text;
             newDataRow.Cells[3].Value = textBox5.Text;
+            
         }
+
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             selectedRow = e.RowIndex;
@@ -54,6 +56,7 @@ namespace WindowsFormsApp1
         {
             иКС_ПЛАТDataSet.Программный_продукт.Rows.Add(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text);
             dataGridView1.DataSource = иКС_ПЛАТDataSet.Программный_продукт;
+            
         }
 
         // Кнопка «Редактировать»
@@ -62,6 +65,7 @@ namespace WindowsFormsApp1
         {
             selectedRow = dataGridView1.CurrentCell.RowIndex;
             dataGridView1.Rows.RemoveAt(selectedRow);
+            
         }
 
         private void button4_Click(object sender, EventArgs e)// Переход на новую форму
@@ -110,25 +114,19 @@ namespace WindowsFormsApp1
         }
 
         private void button5_Click(object sender, EventArgs e)
-        {/*
-            for (int i = 0; i < DataGridView.RowCount; i++)
-            {
-                DataGridView.Rows[i].Selected = false;
-                for (int j = 0; j < DataGridView.ColumnCount; j++)
-                    if (DataGridView.Rows[i].Cells[j].Value != null)
-                        if
-                        (DataGridView.Rows[i].Cells[j].Value.ToString().Contains(textBox6.Text))
-                        {
-                            DataGridView.Rows[i].Selected = true;
-                            break;
-                        }
-            }*/
+        {
+            
 
         }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void button6_Click(object sender, EventArgs e)
+        {
+            
         }
     }
 }

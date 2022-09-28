@@ -74,38 +74,53 @@ namespace WindowsFormsApp1
             // 
             // textBox1
             // 
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox1.Location = new System.Drawing.Point(250, 38);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(236, 20);
+            this.textBox1.Size = new System.Drawing.Size(236, 26);
             this.textBox1.TabIndex = 2;
             this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // textBox2
             // 
+            this.textBox2.BackColor = System.Drawing.Color.White;
+            this.textBox2.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox2.Location = new System.Drawing.Point(250, 71);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(236, 20);
+            this.textBox2.Size = new System.Drawing.Size(236, 26);
             this.textBox2.TabIndex = 3;
             // 
             // textBox3
             // 
+            this.textBox3.BackColor = System.Drawing.Color.White;
+            this.textBox3.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox3.Location = new System.Drawing.Point(250, 108);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(236, 20);
+            this.textBox3.Size = new System.Drawing.Size(236, 26);
             this.textBox3.TabIndex = 4;
             // 
             // textBox4
             // 
+            this.textBox4.BackColor = System.Drawing.Color.White;
+            this.textBox4.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox4.Location = new System.Drawing.Point(250, 145);
             this.textBox4.Name = "textBox4";
-            this.textBox4.Size = new System.Drawing.Size(236, 20);
+            this.textBox4.Size = new System.Drawing.Size(236, 26);
             this.textBox4.TabIndex = 5;
             // 
             // textBox5
             // 
+            this.textBox5.BackColor = System.Drawing.Color.White;
+            this.textBox5.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F);
             this.textBox5.Location = new System.Drawing.Point(250, 183);
             this.textBox5.Name = "textBox5";
-            this.textBox5.Size = new System.Drawing.Size(236, 20);
+            this.textBox5.Size = new System.Drawing.Size(236, 26);
             this.textBox5.TabIndex = 6;
             // 
             // label2
@@ -161,7 +176,10 @@ namespace WindowsFormsApp1
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(184, 214);
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Gainsboro;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button1.Location = new System.Drawing.Point(197, 214);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(143, 53);
             this.button1.TabIndex = 12;
@@ -173,7 +191,7 @@ namespace WindowsFormsApp1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.PeachPuff;
+            this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(531, 279);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
