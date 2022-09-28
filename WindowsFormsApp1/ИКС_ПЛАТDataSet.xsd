@@ -4,12 +4,12 @@
     <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
       <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
         <Connections>
-          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ИКС_ПЛАТConnectionString" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ИКС_ПЛАТConnectionString (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.ИКС_ПЛАТConnectionString" Provider="System.Data.SqlClient" />
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="ИКС_ПЛАТConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="ИКС_ПЛАТConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.WindowsFormsApp1.Properties.Settings.GlobalReference.Default.ИКС_ПЛАТConnectionString1" Provider="System.Data.SqlClient" />
         </Connections>
         <Tables>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="ЗаказTableAdapter" GeneratorDataComponentClassName="ЗаказTableAdapter" Name="Заказ" UserDataComponentName="ЗаказTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ИКС_ПЛАТConnectionString (Settings)" DbObjectName="ИКС_ПЛАТ.dbo.Заказ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ИКС_ПЛАТConnectionString1 (Settings)" DbObjectName="ИКС_ПЛАТ.dbo.Заказ" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Заказ] WHERE (([ID_Заказ] = @Original_ID_Заказ) AND ([Заказ_клиента] = @Original_Заказ_клиента))</CommandText>
@@ -57,7 +57,7 @@ SELECT ID_Заказ, Заказ_клиента FROM Заказ WHERE (ID_Зак
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="КлиентTableAdapter" GeneratorDataComponentClassName="КлиентTableAdapter" Name="Клиент" UserDataComponentName="КлиентTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ИКС_ПЛАТConnectionString (Settings)" DbObjectName="ИКС_ПЛАТ.dbo.Клиент" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ИКС_ПЛАТConnectionString1 (Settings)" DbObjectName="ИКС_ПЛАТ.dbo.Клиент" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Клиент] WHERE (([ID_Клиент] = @Original_ID_Клиент) AND ([ФИО] = @Original_ФИО) AND ([Номер_телефона] = @Original_Номер_телефона) AND ([ID_Заказ] = @Original_ID_Заказ))</CommandText>
@@ -115,7 +115,7 @@ SELECT ID_Клиент, ФИО, Номер_телефона, ID_Заказ FROM 
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="Программный_продуктTableAdapter" GeneratorDataComponentClassName="Программный_продуктTableAdapter" Name="Программный_продукт" UserDataComponentName="Программный_продуктTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ИКС_ПЛАТConnectionString (Settings)" DbObjectName="ИКС_ПЛАТ.dbo.Программный_продукт" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ИКС_ПЛАТConnectionString1 (Settings)" DbObjectName="ИКС_ПЛАТ.dbo.Программный_продукт" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Программный_продукт] WHERE (([ID_Программа] = @Original_ID_Программа) AND ([Название_программы] = @Original_Название_программы) AND ([Руководство_оператора] = @Original_Руководство_оператора) AND ([Отчет] = @Original_Отчет) AND ([ID_Заказ] = @Original_ID_Заказ))</CommandText>
@@ -178,7 +178,7 @@ SELECT ID_Программа, Название_программы, Руково�
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="РабочиеTableAdapter" GeneratorDataComponentClassName="РабочиеTableAdapter" Name="Рабочие" UserDataComponentName="РабочиеTableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ИКС_ПЛАТConnectionString (Settings)" DbObjectName="ИКС_ПЛАТ.dbo.Рабочие" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ИКС_ПЛАТConnectionString1 (Settings)" DbObjectName="ИКС_ПЛАТ.dbo.Рабочие" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <DeleteCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="false">
                     <CommandText>DELETE FROM [dbo].[Рабочие] WHERE (([ID_Рабочие] = @Original_ID_Рабочие) AND ([ФИО] = @Original_ФИО) AND ([Возраст] = @Original_Возраст) AND ([Номер_телефона] = @Original_Номер_телефона) AND ([Название_должности] = @Original_Название_должности) AND ([ID_Заказ] = @Original_ID_Заказ))</CommandText>
@@ -249,14 +249,14 @@ SELECT ID_Рабочие, ФИО, Возраст, Номер_телефона, �
       </DataSource>
     </xs:appinfo>
   </xs:annotation>
-  <xs:element name="ИКС_ПЛАТDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="ИКС_ПЛАТDataSet" msprop:Generator_UserDSName="ИКС_ПЛАТDataSet">
+  <xs:element name="ИКС_ПЛАТDataSet" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_UserDSName="ИКС_ПЛАТDataSet" msprop:Generator_DataSetName="ИКС_ПЛАТDataSet">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="Заказ" msprop:Generator_TableClassName="ЗаказDataTable" msprop:Generator_TableVarName="tableЗаказ" msprop:Generator_TablePropName="Заказ" msprop:Generator_RowDeletingName="ЗаказRowDeleting" msprop:Generator_RowChangingName="ЗаказRowChanging" msprop:Generator_RowEvHandlerName="ЗаказRowChangeEventHandler" msprop:Generator_RowDeletedName="ЗаказRowDeleted" msprop:Generator_UserTableName="Заказ" msprop:Generator_RowChangedName="ЗаказRowChanged" msprop:Generator_RowEvArgName="ЗаказRowChangeEvent" msprop:Generator_RowClassName="ЗаказRow">
+        <xs:element name="Заказ" msprop:Generator_RowEvHandlerName="ЗаказRowChangeEventHandler" msprop:Generator_RowDeletedName="ЗаказRowDeleted" msprop:Generator_RowDeletingName="ЗаказRowDeleting" msprop:Generator_RowEvArgName="ЗаказRowChangeEvent" msprop:Generator_TablePropName="Заказ" msprop:Generator_RowChangedName="ЗаказRowChanged" msprop:Generator_RowChangingName="ЗаказRowChanging" msprop:Generator_TableClassName="ЗаказDataTable" msprop:Generator_RowClassName="ЗаказRow" msprop:Generator_TableVarName="tableЗаказ" msprop:Generator_UserTableName="Заказ">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID_Заказ" msprop:Generator_ColumnVarNameInTable="columnID_Заказ" msprop:Generator_ColumnPropNameInRow="ID_Заказ" msprop:Generator_ColumnPropNameInTable="ID_ЗаказColumn" msprop:Generator_UserColumnName="ID_Заказ" type="xs:int" />
-              <xs:element name="Заказ_клиента" msprop:Generator_ColumnVarNameInTable="columnЗаказ_клиента" msprop:Generator_ColumnPropNameInRow="Заказ_клиента" msprop:Generator_ColumnPropNameInTable="Заказ_клиентаColumn" msprop:Generator_UserColumnName="Заказ_клиента">
+              <xs:element name="ID_Заказ" msprop:Generator_ColumnPropNameInRow="ID_Заказ" msprop:Generator_ColumnPropNameInTable="ID_ЗаказColumn" msprop:Generator_ColumnVarNameInTable="columnID_Заказ" msprop:Generator_UserColumnName="ID_Заказ" type="xs:int" />
+              <xs:element name="Заказ_клиента" msprop:Generator_ColumnPropNameInRow="Заказ_клиента" msprop:Generator_ColumnPropNameInTable="Заказ_клиентаColumn" msprop:Generator_ColumnVarNameInTable="columnЗаказ_клиента" msprop:Generator_UserColumnName="Заказ_клиента">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="300" />
@@ -266,84 +266,84 @@ SELECT ID_Рабочие, ФИО, Возраст, Номер_телефона, �
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Клиент" msprop:Generator_TableClassName="КлиентDataTable" msprop:Generator_TableVarName="tableКлиент" msprop:Generator_TablePropName="Клиент" msprop:Generator_RowDeletingName="КлиентRowDeleting" msprop:Generator_RowChangingName="КлиентRowChanging" msprop:Generator_RowEvHandlerName="КлиентRowChangeEventHandler" msprop:Generator_RowDeletedName="КлиентRowDeleted" msprop:Generator_UserTableName="Клиент" msprop:Generator_RowChangedName="КлиентRowChanged" msprop:Generator_RowEvArgName="КлиентRowChangeEvent" msprop:Generator_RowClassName="КлиентRow">
+        <xs:element name="Клиент" msprop:Generator_RowEvHandlerName="КлиентRowChangeEventHandler" msprop:Generator_RowDeletedName="КлиентRowDeleted" msprop:Generator_RowDeletingName="КлиентRowDeleting" msprop:Generator_RowEvArgName="КлиентRowChangeEvent" msprop:Generator_TablePropName="Клиент" msprop:Generator_RowChangedName="КлиентRowChanged" msprop:Generator_RowChangingName="КлиентRowChanging" msprop:Generator_TableClassName="КлиентDataTable" msprop:Generator_RowClassName="КлиентRow" msprop:Generator_TableVarName="tableКлиент" msprop:Generator_UserTableName="Клиент">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID_Клиент" msprop:Generator_ColumnVarNameInTable="columnID_Клиент" msprop:Generator_ColumnPropNameInRow="ID_Клиент" msprop:Generator_ColumnPropNameInTable="ID_КлиентColumn" msprop:Generator_UserColumnName="ID_Клиент" type="xs:int" />
-              <xs:element name="ФИО" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_UserColumnName="ФИО">
+              <xs:element name="ID_Клиент" msprop:Generator_ColumnPropNameInRow="ID_Клиент" msprop:Generator_ColumnPropNameInTable="ID_КлиентColumn" msprop:Generator_ColumnVarNameInTable="columnID_Клиент" msprop:Generator_UserColumnName="ID_Клиент" type="xs:int" />
+              <xs:element name="ФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_UserColumnName="ФИО">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Номер_телефона" msprop:Generator_ColumnVarNameInTable="columnНомер_телефона" msprop:Generator_ColumnPropNameInRow="Номер_телефона" msprop:Generator_ColumnPropNameInTable="Номер_телефонаColumn" msprop:Generator_UserColumnName="Номер_телефона" type="xs:long" />
-              <xs:element name="ID_Заказ" msprop:Generator_ColumnVarNameInTable="columnID_Заказ" msprop:Generator_ColumnPropNameInRow="ID_Заказ" msprop:Generator_ColumnPropNameInTable="ID_ЗаказColumn" msprop:Generator_UserColumnName="ID_Заказ" type="xs:int" />
+              <xs:element name="Номер_телефона" msprop:Generator_ColumnPropNameInRow="Номер_телефона" msprop:Generator_ColumnPropNameInTable="Номер_телефонаColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_телефона" msprop:Generator_UserColumnName="Номер_телефона" type="xs:long" />
+              <xs:element name="ID_Заказ" msprop:Generator_ColumnPropNameInRow="ID_Заказ" msprop:Generator_ColumnPropNameInTable="ID_ЗаказColumn" msprop:Generator_ColumnVarNameInTable="columnID_Заказ" msprop:Generator_UserColumnName="ID_Заказ" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Программный_продукт" msprop:Generator_TableClassName="Программный_продуктDataTable" msprop:Generator_TableVarName="tableПрограммный_продукт" msprop:Generator_TablePropName="Программный_продукт" msprop:Generator_RowDeletingName="Программный_продуктRowDeleting" msprop:Generator_RowChangingName="Программный_продуктRowChanging" msprop:Generator_RowEvHandlerName="Программный_продуктRowChangeEventHandler" msprop:Generator_RowDeletedName="Программный_продуктRowDeleted" msprop:Generator_UserTableName="Программный_продукт" msprop:Generator_RowChangedName="Программный_продуктRowChanged" msprop:Generator_RowEvArgName="Программный_продуктRowChangeEvent" msprop:Generator_RowClassName="Программный_продуктRow">
+        <xs:element name="Программный_продукт" msprop:Generator_RowEvHandlerName="Программный_продуктRowChangeEventHandler" msprop:Generator_RowDeletedName="Программный_продуктRowDeleted" msprop:Generator_RowDeletingName="Программный_продуктRowDeleting" msprop:Generator_RowEvArgName="Программный_продуктRowChangeEvent" msprop:Generator_TablePropName="Программный_продукт" msprop:Generator_RowChangedName="Программный_продуктRowChanged" msprop:Generator_RowChangingName="Программный_продуктRowChanging" msprop:Generator_TableClassName="Программный_продуктDataTable" msprop:Generator_RowClassName="Программный_продуктRow" msprop:Generator_TableVarName="tableПрограммный_продукт" msprop:Generator_UserTableName="Программный_продукт">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID_Программа" msprop:Generator_ColumnVarNameInTable="columnID_Программа" msprop:Generator_ColumnPropNameInRow="ID_Программа" msprop:Generator_ColumnPropNameInTable="ID_ПрограммаColumn" msprop:Generator_UserColumnName="ID_Программа">
+              <xs:element name="ID_Программа" msprop:Generator_ColumnPropNameInRow="ID_Программа" msprop:Generator_ColumnPropNameInTable="ID_ПрограммаColumn" msprop:Generator_ColumnVarNameInTable="columnID_Программа" msprop:Generator_UserColumnName="ID_Программа">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Название_программы" msprop:Generator_ColumnVarNameInTable="columnНазвание_программы" msprop:Generator_ColumnPropNameInRow="Название_программы" msprop:Generator_ColumnPropNameInTable="Название_программыColumn" msprop:Generator_UserColumnName="Название_программы">
+              <xs:element name="Название_программы" msprop:Generator_ColumnPropNameInRow="Название_программы" msprop:Generator_ColumnPropNameInTable="Название_программыColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание_программы" msprop:Generator_UserColumnName="Название_программы">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Руководство_оператора" msprop:Generator_ColumnVarNameInTable="columnРуководство_оператора" msprop:Generator_ColumnPropNameInRow="Руководство_оператора" msprop:Generator_ColumnPropNameInTable="Руководство_оператораColumn" msprop:Generator_UserColumnName="Руководство_оператора">
+              <xs:element name="Руководство_оператора" msprop:Generator_ColumnPropNameInRow="Руководство_оператора" msprop:Generator_ColumnPropNameInTable="Руководство_оператораColumn" msprop:Generator_ColumnVarNameInTable="columnРуководство_оператора" msprop:Generator_UserColumnName="Руководство_оператора">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Отчет" msprop:Generator_ColumnVarNameInTable="columnОтчет" msprop:Generator_ColumnPropNameInRow="Отчет" msprop:Generator_ColumnPropNameInTable="ОтчетColumn" msprop:Generator_UserColumnName="Отчет">
+              <xs:element name="Отчет" msprop:Generator_ColumnPropNameInRow="Отчет" msprop:Generator_ColumnPropNameInTable="ОтчетColumn" msprop:Generator_ColumnVarNameInTable="columnОтчет" msprop:Generator_UserColumnName="Отчет">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="150" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ID_Заказ" msprop:Generator_ColumnVarNameInTable="columnID_Заказ" msprop:Generator_ColumnPropNameInRow="ID_Заказ" msprop:Generator_ColumnPropNameInTable="ID_ЗаказColumn" msprop:Generator_UserColumnName="ID_Заказ" type="xs:int" />
+              <xs:element name="ID_Заказ" msprop:Generator_ColumnPropNameInRow="ID_Заказ" msprop:Generator_ColumnPropNameInTable="ID_ЗаказColumn" msprop:Generator_ColumnVarNameInTable="columnID_Заказ" msprop:Generator_UserColumnName="ID_Заказ" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="Рабочие" msprop:Generator_TableClassName="РабочиеDataTable" msprop:Generator_TableVarName="tableРабочие" msprop:Generator_TablePropName="Рабочие" msprop:Generator_RowDeletingName="РабочиеRowDeleting" msprop:Generator_RowChangingName="РабочиеRowChanging" msprop:Generator_RowEvHandlerName="РабочиеRowChangeEventHandler" msprop:Generator_RowDeletedName="РабочиеRowDeleted" msprop:Generator_UserTableName="Рабочие" msprop:Generator_RowChangedName="РабочиеRowChanged" msprop:Generator_RowEvArgName="РабочиеRowChangeEvent" msprop:Generator_RowClassName="РабочиеRow">
+        <xs:element name="Рабочие" msprop:Generator_RowEvHandlerName="РабочиеRowChangeEventHandler" msprop:Generator_RowDeletedName="РабочиеRowDeleted" msprop:Generator_RowDeletingName="РабочиеRowDeleting" msprop:Generator_RowEvArgName="РабочиеRowChangeEvent" msprop:Generator_TablePropName="Рабочие" msprop:Generator_RowChangedName="РабочиеRowChanged" msprop:Generator_RowChangingName="РабочиеRowChanging" msprop:Generator_TableClassName="РабочиеDataTable" msprop:Generator_RowClassName="РабочиеRow" msprop:Generator_TableVarName="tableРабочие" msprop:Generator_UserTableName="Рабочие">
           <xs:complexType>
             <xs:sequence>
-              <xs:element name="ID_Рабочие" msprop:Generator_ColumnVarNameInTable="columnID_Рабочие" msprop:Generator_ColumnPropNameInRow="ID_Рабочие" msprop:Generator_ColumnPropNameInTable="ID_РабочиеColumn" msprop:Generator_UserColumnName="ID_Рабочие" type="xs:int" />
-              <xs:element name="ФИО" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_UserColumnName="ФИО">
+              <xs:element name="ID_Рабочие" msprop:Generator_ColumnPropNameInRow="ID_Рабочие" msprop:Generator_ColumnPropNameInTable="ID_РабочиеColumn" msprop:Generator_ColumnVarNameInTable="columnID_Рабочие" msprop:Generator_UserColumnName="ID_Рабочие" type="xs:int" />
+              <xs:element name="ФИО" msprop:Generator_ColumnPropNameInRow="ФИО" msprop:Generator_ColumnPropNameInTable="ФИОColumn" msprop:Generator_ColumnVarNameInTable="columnФИО" msprop:Generator_UserColumnName="ФИО">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="100" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Возраст" msprop:Generator_ColumnVarNameInTable="columnВозраст" msprop:Generator_ColumnPropNameInRow="Возраст" msprop:Generator_ColumnPropNameInTable="ВозрастColumn" msprop:Generator_UserColumnName="Возраст">
+              <xs:element name="Возраст" msprop:Generator_ColumnPropNameInRow="Возраст" msprop:Generator_ColumnPropNameInTable="ВозрастColumn" msprop:Generator_ColumnVarNameInTable="columnВозраст" msprop:Generator_UserColumnName="Возраст">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="Номер_телефона" msprop:Generator_ColumnVarNameInTable="columnНомер_телефона" msprop:Generator_ColumnPropNameInRow="Номер_телефона" msprop:Generator_ColumnPropNameInTable="Номер_телефонаColumn" msprop:Generator_UserColumnName="Номер_телефона" type="xs:long" />
-              <xs:element name="Название_должности" msprop:Generator_ColumnVarNameInTable="columnНазвание_должности" msprop:Generator_ColumnPropNameInRow="Название_должности" msprop:Generator_ColumnPropNameInTable="Название_должностиColumn" msprop:Generator_UserColumnName="Название_должности">
+              <xs:element name="Номер_телефона" msprop:Generator_ColumnPropNameInRow="Номер_телефона" msprop:Generator_ColumnPropNameInTable="Номер_телефонаColumn" msprop:Generator_ColumnVarNameInTable="columnНомер_телефона" msprop:Generator_UserColumnName="Номер_телефона" type="xs:long" />
+              <xs:element name="Название_должности" msprop:Generator_ColumnPropNameInRow="Название_должности" msprop:Generator_ColumnPropNameInTable="Название_должностиColumn" msprop:Generator_ColumnVarNameInTable="columnНазвание_должности" msprop:Generator_UserColumnName="Название_должности">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="50" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
-              <xs:element name="ID_Заказ" msprop:Generator_ColumnVarNameInTable="columnID_Заказ" msprop:Generator_ColumnPropNameInRow="ID_Заказ" msprop:Generator_ColumnPropNameInTable="ID_ЗаказColumn" msprop:Generator_UserColumnName="ID_Заказ" type="xs:int" />
+              <xs:element name="ID_Заказ" msprop:Generator_ColumnPropNameInRow="ID_Заказ" msprop:Generator_ColumnPropNameInTable="ID_ЗаказColumn" msprop:Generator_ColumnVarNameInTable="columnID_Заказ" msprop:Generator_UserColumnName="ID_Заказ" type="xs:int" />
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -368,9 +368,9 @@ SELECT ID_Рабочие, ФИО, Возраст, Номер_телефона, �
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="FK__Клиент__ID_Заказ__48CFD27E" msdata:parent="Заказ" msdata:child="Клиент" msdata:parentkey="ID_Заказ" msdata:childkey="ID_Заказ" msprop:Generator_UserChildTable="Клиент" msprop:Generator_ChildPropName="GetКлиентRows" msprop:Generator_UserRelationName="FK__Клиент__ID_Заказ__48CFD27E" msprop:Generator_ParentPropName="ЗаказRow" msprop:Generator_RelationVarName="relationFK__Клиент__ID_Заказ__48CFD27E" msprop:Generator_UserParentTable="Заказ" />
-      <msdata:Relationship name="FK__Программн__ID_За__45F365D3" msdata:parent="Заказ" msdata:child="Программный_продукт" msdata:parentkey="ID_Заказ" msdata:childkey="ID_Заказ" msprop:Generator_UserChildTable="Программный_продукт" msprop:Generator_ChildPropName="GetПрограммный_продуктRows" msprop:Generator_UserRelationName="FK__Программн__ID_За__45F365D3" msprop:Generator_ParentPropName="ЗаказRow" msprop:Generator_RelationVarName="relationFK__Программн__ID_За__45F365D3" msprop:Generator_UserParentTable="Заказ" />
-      <msdata:Relationship name="FK__Рабочие__ID_Зака__4316F928" msdata:parent="Заказ" msdata:child="Рабочие" msdata:parentkey="ID_Заказ" msdata:childkey="ID_Заказ" msprop:Generator_UserChildTable="Рабочие" msprop:Generator_ChildPropName="GetРабочиеRows" msprop:Generator_UserRelationName="FK__Рабочие__ID_Зака__4316F928" msprop:Generator_ParentPropName="ЗаказRow" msprop:Generator_RelationVarName="relationFK__Рабочие__ID_Зака__4316F928" msprop:Generator_UserParentTable="Заказ" />
+      <msdata:Relationship name="FK__Клиент__ID_Заказ__36B12243" msdata:parent="Заказ" msdata:child="Клиент" msdata:parentkey="ID_Заказ" msdata:childkey="ID_Заказ" msprop:Generator_UserParentTable="Заказ" msprop:Generator_UserChildTable="Клиент" msprop:Generator_RelationVarName="relationFK__Клиент__ID_Заказ__36B12243" msprop:Generator_ChildPropName="GetКлиентRows" msprop:Generator_ParentPropName="ЗаказRow" msprop:Generator_UserRelationName="FK__Клиент__ID_Заказ__36B12243" />
+      <msdata:Relationship name="FK__Программн__ID_За__33D4B598" msdata:parent="Заказ" msdata:child="Программный_продукт" msdata:parentkey="ID_Заказ" msdata:childkey="ID_Заказ" msprop:Generator_UserParentTable="Заказ" msprop:Generator_UserChildTable="Программный_продукт" msprop:Generator_RelationVarName="relationFK__Программн__ID_За__33D4B598" msprop:Generator_ChildPropName="GetПрограммный_продуктRows" msprop:Generator_ParentPropName="ЗаказRow" msprop:Generator_UserRelationName="FK__Программн__ID_За__33D4B598" />
+      <msdata:Relationship name="FK__Рабочие__ID_Зака__398D8EEE" msdata:parent="Заказ" msdata:child="Рабочие" msdata:parentkey="ID_Заказ" msdata:childkey="ID_Заказ" msprop:Generator_UserParentTable="Заказ" msprop:Generator_UserChildTable="Рабочие" msprop:Generator_RelationVarName="relationFK__Рабочие__ID_Зака__398D8EEE" msprop:Generator_ChildPropName="GetРабочиеRows" msprop:Generator_ParentPropName="ЗаказRow" msprop:Generator_UserRelationName="FK__Рабочие__ID_Зака__398D8EEE" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>
