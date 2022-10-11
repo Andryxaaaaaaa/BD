@@ -30,6 +30,7 @@ namespace WindowsFormsApp1
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form2));
             this.label1 = new System.Windows.Forms.Label();
             this.иКС_ПЛАТDataSet = new WindowsFormsApp1.ИКС_ПЛАТDataSet();
             this.программныйпродуктBindingSource = new System.Windows.Forms.BindingSource(this.components);
@@ -45,8 +46,10 @@ namespace WindowsFormsApp1
             this.label5 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.иКС_ПЛАТDataSet)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.программныйпродуктBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -92,6 +95,7 @@ namespace WindowsFormsApp1
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(236, 26);
             this.textBox2.TabIndex = 3;
+            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // textBox3
             // 
@@ -187,12 +191,23 @@ namespace WindowsFormsApp1
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(458, 225);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(78, 53);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 33;
+            this.pictureBox1.TabStop = false;
+            // 
             // Form2
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(531, 279);
+            this.Controls.Add(this.pictureBox1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
@@ -210,6 +225,7 @@ namespace WindowsFormsApp1
             this.Load += new System.EventHandler(this.Form2_Load);
             ((System.ComponentModel.ISupportInitialize)(this.иКС_ПЛАТDataSet)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.программныйпродуктBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -232,5 +248,6 @@ namespace WindowsFormsApp1
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }
