@@ -23,7 +23,7 @@ namespace WindowsFormsApp1
             var materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
             materialSkinManager.Theme = MaterialSkinManager.Themes.DARK;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey700, Primary.BlueGrey800, Primary.BlueGrey400, Accent.LightBlue100, TextShade.WHITE);
+            materialSkinManager.ColorScheme = new ColorScheme(Primary.Teal600, Primary.Teal600, Primary.Teal600, Accent.Teal100, TextShade.WHITE);
 
 
         }
@@ -33,7 +33,7 @@ namespace WindowsFormsApp1
         private void Form1_Load(object sender, EventArgs e)
         {
             // TODO: данная строка кода позволяет загрузить данные в таблицу "иКС_ПЛАТDataSet1.Программный_продукт". При необходимости она может быть перемещена или удалена.
-            this.программный_продуктTableAdapter1.Fill(this.иКС_ПЛАТDataSet1.Программный_продукт);
+            
             
 
         }
@@ -43,11 +43,11 @@ namespace WindowsFormsApp1
         private void button3_Click(object sender, EventArgs e)
         {
             DataGridViewRow newDataRow = dataGridView1.Rows[selectedRow];
-            newDataRow.Cells[0].Value = textBox1.Text;
-            newDataRow.Cells[1].Value = textBox2.Text;
-            newDataRow.Cells[2].Value = textBox3.Text;
-            newDataRow.Cells[3].Value = textBox4.Text;
-            newDataRow.Cells[3].Value = textBox5.Text;
+            newDataRow.Cells[0].Value = materialTextBox3.Text;
+            newDataRow.Cells[1].Value = materialTextBox4.Text;
+            newDataRow.Cells[2].Value = materialTextBox5.Text;
+            newDataRow.Cells[3].Value = materialTextBox6.Text;
+            newDataRow.Cells[3].Value = materialTextBox7.Text;
             
         }
 
@@ -55,11 +55,11 @@ namespace WindowsFormsApp1
         {
             selectedRow = e.RowIndex;
             DataGridViewRow row = dataGridView1.Rows[selectedRow];
-            textBox1.Text = row.Cells[0].Value.ToString();
-            textBox2.Text = row.Cells[1].Value.ToString();
-            textBox3.Text = row.Cells[2].Value.ToString();
-            textBox4.Text = row.Cells[3].Value.ToString();
-            textBox5.Text = row.Cells[3].Value.ToString();
+            materialTextBox3.Text = row.Cells[0].Value.ToString();
+            materialTextBox4.Text = row.Cells[1].Value.ToString();
+            materialTextBox5.Text = row.Cells[2].Value.ToString();
+            materialTextBox6.Text = row.Cells[3].Value.ToString();
+            materialTextBox7.Text = row.Cells[3].Value.ToString();
         }
         private void button1_Click(object sender, EventArgs e)
         {
@@ -120,36 +120,13 @@ namespace WindowsFormsApp1
 
         }
 
-        private void button5_Click(object sender, EventArgs e)
-        {
-            for (int i = 0; i < dataGridView1.RowCount; i++)
-            {
-                dataGridView1.Rows[i].Selected = false;
-                for (int j = 0; j < dataGridView1.ColumnCount; j++)
-                {
-                    if (dataGridView1.Rows[i].Cells[j].Value != null)
-                    {
-                        if
-                        (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox6.Text))
-                        {
-                            dataGridView1.Rows[i].Selected = true;
-                            break;
-                        }
-                    }
-
-                }
-            }
-        }
 
         private void textBox6_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void button6_Click(object sender, EventArgs e)
-        {
-            программныйпродуктBindingSource.Filter = "(ID_Программа = '" + textBox7.Text + "')";
-        }
+     
 
         private void textBox7_TextChanged(object sender, EventArgs e)
         {
@@ -171,7 +148,7 @@ namespace WindowsFormsApp1
                     if (dataGridView1.Rows[i].Cells[j].Value != null)
                     {
                         if
-                        (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(textBox6.Text))
+                        (dataGridView1.Rows[i].Cells[j].Value.ToString().Contains(materialTextBox1.Text))
                         {
                             dataGridView1.Rows[i].Selected = true;
                             break;
@@ -184,7 +161,7 @@ namespace WindowsFormsApp1
 
         private void materialButton2_Click(object sender, EventArgs e)
         {
-            программныйпродуктBindingSource.Filter = "(ID_Программа = '" + textBox7.Text + "')";
+            программныйпродуктBindingSource.Filter = "(ID_Программа = '" + materialTextBox2.Text + "')";
         }
 
         private void materialButton3_Click(object sender, EventArgs e)
@@ -195,18 +172,18 @@ namespace WindowsFormsApp1
 
         private void materialButton4_Click(object sender, EventArgs e)
         {
-            иКС_ПЛАТDataSet.Программный_продукт.Rows.Add(textBox1.Text, textBox2.Text, textBox3.Text, textBox4.Text, textBox5.Text);
+            иКС_ПЛАТDataSet.Программный_продукт.Rows.Add(materialTextBox3.Text, materialTextBox4.Text, materialTextBox5.Text, materialTextBox6.Text, materialTextBox7.Text);
             dataGridView1.DataSource = иКС_ПЛАТDataSet.Программный_продукт;
         }
 
         private void materialButton5_Click(object sender, EventArgs e)
         {
             DataGridViewRow newDataRow = dataGridView1.Rows[selectedRow];
-            newDataRow.Cells[0].Value = textBox1.Text;
-            newDataRow.Cells[1].Value = textBox2.Text;
-            newDataRow.Cells[2].Value = textBox3.Text;
-            newDataRow.Cells[3].Value = textBox4.Text;
-            newDataRow.Cells[3].Value = textBox5.Text;
+            newDataRow.Cells[0].Value = materialTextBox3.Text;
+            newDataRow.Cells[1].Value = materialTextBox4.Text;
+            newDataRow.Cells[2].Value = materialTextBox5.Text;
+            newDataRow.Cells[3].Value = materialTextBox6.Text;
+            newDataRow.Cells[3].Value = materialTextBox7.Text;
 
         }
 
@@ -223,6 +200,56 @@ namespace WindowsFormsApp1
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox1_TextChanged_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialLabel1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label5_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox2_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void materialTextBox3_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox2_Click_1(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox13_Click(object sender, EventArgs e)
         {
 
         }
